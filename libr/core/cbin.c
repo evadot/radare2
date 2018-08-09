@@ -1029,7 +1029,7 @@ static int srclineCmp(const void *a, const void *b) {
 	if (fa && fb) {
 		return !strcmp (fa, fb);
 	}
-	return (fa && fb && !strcmp (fa, fb));
+	return (a && !b)? 1: -1;
 }
 
 static int bin_source(RCore *r, int mode) {
